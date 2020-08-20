@@ -6,16 +6,20 @@ public struct Goto {
     
     public typealias Closure = () -> Void
     private var closures = [String: Closure]()
-    fileprivate mutating func set(_ label: String, closure: @escaping Closure) {
-        self.closures[label] = closure
+    fileprivate mutating func define(_ tag: String, closure: @escaping Closure) -> Bool {
+        if !self.closures.containsKey(tag) {
+            self.closures[tag] = closure
+            return true
+        }
+        return false
     }
-    fileprivate func call(_ label: String) {
-        self.closures[label]?()
+    fileprivate func fire(_ tag: String) {
+        self.closures[tag]?()
     }
     
-    fileprivate mutating func clear(_ labels: String...) { clear(labels) }
-    fileprivate mutating func clear(_ labels: [String]) {
-        labels.forEach {
+    fileprivate mutating func clear(_ tags: String...) { clear(tags) }
+    fileprivate mutating func clear(_ tags: [String]) {
+        tags.forEach {
             self.closures.removeValue(forKey: $0)
         }
     }
@@ -27,13 +31,13 @@ public struct Goto {
 
 // MARK: - Public
 extension Goto {
-    public static func set(_ label: String, closure: @escaping Closure) {
-        Goto.shared.set(label, closure: closure)
+    public static func define(_ tag: String, closure: @escaping Closure) -> Bool {
+        return Goto.shared.define(tag, closure: closure)
     }
     
-    public static func clear(_ labels: String...) { clear(labels) }
-    public static func clear(_ labels: [String]) {
-        Goto.shared.clear(labels)
+    public static func clear(_ tags: String...) { clear(tags) }
+    public static func clear(_ tags: [String]) {
+        Goto.shared.clear(tags)
     }
     
     public static func clearAll() {
@@ -43,11 +47,11 @@ extension Goto {
 
 // MARK: - Global
 infix operator |->
-public func |-> (goto: Goto, label: String) {
-    Goto.shared.call(label)
+public func |-> (goto: Goto, tag: String) {
+    Goto.shared.fire(tag)
 }
 
 prefix operator |->
-public prefix func |-> (label: String) {
-    Goto.shared.call(label)
+public prefix func |-> (tag: String) {
+    Goto.shared.fire(tag)
 }

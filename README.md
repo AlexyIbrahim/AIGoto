@@ -22,12 +22,12 @@ You can use SPM to install `ProductName` by adding it to your `Package.swift`:
 ```swift
 import AIGoto
 
-goto.set("first goto") {
+goto.define("first goto") {
 	print("first goto fired")
 	|->"second goto"
 }
         
-goto.set("second goto") {
+goto.define("second goto") {
 	print("second goto fired")
 }
         

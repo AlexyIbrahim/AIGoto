@@ -15,12 +15,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        goto.set("first goto") {
+        goto.define("first goto") {
             print("first goto fired")
             |->"second goto"
         }
         
-        goto.set("second goto") {
+        goto.define("second goto") {
             print("second goto fired")
         }
         
