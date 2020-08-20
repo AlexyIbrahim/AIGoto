@@ -13,7 +13,7 @@ A Swift replacement for C goto statement
 ## Installation
 
 #### Swift Package Manager
-You can use SPM to install `ProductName` by adding it to your `Package.swift`:
+You can use SPM to install `AIGoto` by adding it to your `Package.swift`:
 
 [ https://github.com/AlexyIbrahim/AIGoto.git ](https://github.com/AlexyIbrahim/AIGoto.git)
 
@@ -23,12 +23,12 @@ You can use SPM to install `ProductName` by adding it to your `Package.swift`:
 import AIGoto
 
 goto.define("first goto") {
-	print("first goto fired")
-	|->"second goto"
+  print("first goto fired")
+  |->"second goto"
 }
         
 goto.define("second goto") {
-	print("second goto fired")
+  print("second goto fired")
 }
         
 |->"first goto"
