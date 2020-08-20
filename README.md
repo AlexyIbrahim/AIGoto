@@ -1,7 +1,7 @@
 # AIGoto
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url] 
-[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
+![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)
 
 A Swift replacement for C goto statement
 
