@@ -15,8 +15,8 @@ A Swift replacement for C goto statement
 #### Swift Package Manager
 You can use SPM to install `ProductName` by adding it to your `Package.swift`:
 
-```ruby
-https://github.com/AlexyIbrahim/AIGoto.git
+```
+[https://github.com/AlexyIbrahim/AIGoto.git](https://github.com/AlexyIbrahim/AIGoto.git)
 ```
 
 ## Usage example
