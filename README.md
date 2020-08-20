@@ -15,9 +15,7 @@ A Swift replacement for C goto statement
 #### Swift Package Manager
 You can use SPM to install `ProductName` by adding it to your `Package.swift`:
 
-```
-[https://github.com/AlexyIbrahim/AIGoto.git](https://github.com/AlexyIbrahim/AIGoto.git)
-```
+[ https://github.com/AlexyIbrahim/AIGoto.git ](https://github.com/AlexyIbrahim/AIGoto.git)
 
 ## Usage example
 
@@ -43,6 +41,6 @@ See ``LICENSE`` for more information.
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
-[license-url]: LICENSE
+[license-url]: LICENSE.md
 # 
 
