@@ -15,7 +15,9 @@ A Swift replacement for C goto statement
 #### Swift Package Manager
 You can use SPM to install `AIGoto` by adding it to your `Package.swift`:
 
-[ https://github.com/AlexyIbrahim/AIGoto.git ](https://github.com/AlexyIbrahim/AIGoto.git)
+```
+.package(url: "https://github.com/AlexyIbrahim/AIGoto.git", from: "1.0.0")
+```
 
 ## Usage example
 
